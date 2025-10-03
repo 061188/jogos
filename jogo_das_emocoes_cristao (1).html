@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo das Emoções - Versão Cristã</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #4a7c59;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4a7c59;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3b6648;
+        }
+        #desafio {
+            margin-top: 30px;
+            font-size: 22px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎲 Jogo das Emoções - Versão Cristã</h1>
+    <p>Clique no botão para sortear um desafio divertido e edificante!</p>
+    <button onclick="sortearDesafio()">Sortear Desafio</button>
+    <div id="desafio"></div>
+
+    <script>
+        const desafios = ['Compartilhe um versículo que te marcou recentemente.', 'Imite como você acha que Noé explicava a arca pras pessoas.', 'Fale como se estivesse anunciando um culto no estilo radialista animado.', 'Conte uma bênção que você recebeu nos últimos dias.', 'Faça uma pose de personagem bíblico e o grupo tenta adivinhar quem é.', 'Compartilhe uma música cristã que te anima e diga por quê.', 'Fale uma frase como se estivesse pregando com muita emoção.', 'Conte uma história bíblica em 30 segundos como se fosse um trailer de filme.', 'Escolha alguém e diga uma qualidade espiritual que você vê nela.', 'Fale uma coisa que você aprendeu com Deus esse mês.', 'Imite como você acha que Davi comemorou depois de vencer Golias.', 'Compartilhe uma oração curta por alguém do grupo.', 'Fale como se estivesse dando um conselho bíblico para alguém que perdeu o ônibus.', "Crie um 'versículo inventado' (engraçado, mas respeitoso) e diga de qual 'livro' seria.", 'Fale uma coisa que você ama sobre estar na célula.'];
+        function sortearDesafio() {
+            const indice = Math.floor(Math.random() * desafios.length);
+            document.getElementById("desafio").innerText = desafios[indice];
+        }
+    </script>
+</body>
+</html>
